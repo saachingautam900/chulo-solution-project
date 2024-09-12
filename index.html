@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quote Generator</h1>
+        
+        <div class="controls">
+            
+            <select id="category" onchange="updateQuote()">
+                <option value="all">All Categories</option>
+                <option value="inspiration">Inspiration</option>
+                <option value="science">Science</option>
+                <option value="motivation">Motivation</option>
+                <option value="philosophy">Philosophy</option>
+            </select>
+            
+            
+            <button onclick="prevQuote()">Previous</button>
+            <button onclick="nextQuote()">Next</button>
+            <button onclick="randomQuote()">Random</button>
+            
+           
+            <label for="dark-mode">
+                Dark Mode
+                <input type="checkbox" id="dark-mode" onchange="toggleDarkMode()">
+            </label>
+            
+          
+            <button onclick="changeFontSize(-2)">A-</button>
+            <button onclick="changeFontSize(2)">A+</button>
+        </div>
+        
+      
+        <div id="quote-box">
+            <p id="quote">Click "Random" to get a quote.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
